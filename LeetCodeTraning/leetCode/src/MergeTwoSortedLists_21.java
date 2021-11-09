@@ -1,7 +1,6 @@
 import org.junit.Test;
 
 public class MergeTwoSortedLists_21 {
-    
     public class ListNode {
         int val;
         ListNode next;
@@ -9,6 +8,7 @@ public class MergeTwoSortedLists_21 {
         ListNode(int val) { this.val = val; }
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
+
 
     @Test
     public void MergeTwoSortedListsCase1(){
@@ -267,3 +267,6 @@ public class MergeTwoSortedLists_21 {
         }
     }
 }
+
+
+
