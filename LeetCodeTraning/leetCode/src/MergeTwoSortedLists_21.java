@@ -15,7 +15,7 @@ public class MergeTwoSortedLists_21 {
 
     @Test
     public void MergeTwoSortedListsCase1(){
-        //Ans:1,2,3
+   
         int[] l1 = {1,2,4};
         int[] l2 = {1,3,4};        
         var result = MergeTwoLists(GenNodeList(l1), GenNodeList(l2));      
@@ -24,7 +24,7 @@ public class MergeTwoSortedLists_21 {
 
     @Test
     public void MergeTwoSortedListsCase2(){
-        //Ans:1,2,3
+   
         int[] l1 = {};
         int[] l2 = {};        
         var result = MergeTwoLists(GenNodeList(l1), GenNodeList(l2));      
@@ -33,7 +33,7 @@ public class MergeTwoSortedLists_21 {
 
     @Test
     public void MergeTwoSortedListsCase3(){
-        //Ans:1,2,3
+     
         int[] l1 = {};
         int[] l2 = {0};        
         var result = MergeTwoLists(GenNodeList(l1), GenNodeList(l2));      
@@ -64,6 +64,16 @@ public class MergeTwoSortedLists_21 {
         var result = mergeTwoListsIteration(GenNodeList(l1), GenNodeList(l2));      
         PrintListNode(result);
     }
+
+    @Test
+    public void MergeTwoSortedListsCase7(){
+        int[] l1 = {1,2,3};
+        int[] l2 = {1,5,6};        
+        var result = mergeTwoLists(GenNodeList(l1), GenNodeList(l2));      
+        PrintListNode(result);
+    }
+
+
 
     // 一般寫法
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
