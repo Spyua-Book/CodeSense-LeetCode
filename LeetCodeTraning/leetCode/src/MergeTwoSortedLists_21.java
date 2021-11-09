@@ -1,6 +1,9 @@
 import org.junit.Test;
 
 public class MergeTwoSortedLists_21 {
+    
+    // 合成兩個List序列. 關鍵在走訪Link List. 以最小值那段為先拿取 (mergeTwoLists)
+    
     public class ListNode {
         int val;
         ListNode next;
@@ -204,13 +207,13 @@ public class MergeTwoSortedLists_21 {
 
             innerList = innerHead;
 
-            if(checkIndex==0){                
-                var node = new ListNode();
-                node.val = outerList.val;
-                node.next = innerList;
-                innerLoopCnt = -1;
-                innerHead = node;
-            }
+            // if(checkIndex==0){                
+            //     var node = new ListNode();
+            //     node.val = outerList.val;
+            //     node.next = innerList;
+            //     innerLoopCnt = -1;
+            //     innerHead = node;
+            // }
 
             innerLoopCnt = innerLoopCnt==-1? -1:1;
             // Insert
@@ -242,6 +245,7 @@ public class MergeTwoSortedLists_21 {
         return innerHead;
     }
 
+    // Other Function
     public ListNode GenNodeList(int[] nums){
 
         if(nums.length==0)
