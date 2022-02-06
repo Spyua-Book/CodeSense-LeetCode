@@ -31,7 +31,58 @@ int main()
     int maxArrayON = MaxSubArrayON(subArray, 9);
     printf("Max Array ON =>%d\n",maxArrayON);
 
+    //ninenine();
+    tree(4);
     return 0;
 }
 
+// 99 Test
+void ninenine(){
 
+    // 1*1, 1*2, 1*3...1*9
+    // 2*1, 2*2, 2*3...2*9
+    // ...
+
+    for(int i=1; i<=9; i++){
+
+        printf("\n");
+
+        for(int j=1; j<=9; j++){
+
+             printf("%d * %d = %d\t", i, j, i*j);
+
+            if(j%3==0)
+                printf("\n");
+
+
+        }
+
+    }
+
+}
+
+// Tree Test
+void tree(int layer){
+
+    /*
+        *       4-1
+       ***      4-2
+      *****     4-3
+     *******    4
+
+     1,3,5,7 -> 4 layer
+    */
+
+    for(int i=layer; i>=1; i--){
+
+        // Space
+        for(int j=0; j<i-1; j++)
+            printf(" ");
+
+        // Star
+        for(int k=0; k< (layer-i)*2+1; k++)
+            printf("*");
+
+        printf("\n");
+    }
+}
