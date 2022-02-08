@@ -10,4 +10,6 @@ int MaxSubArrayON3(int *nums, int numsSize);
 int MaxSubArrayON2(int *nums, int numsSize);
 int MaxSubArrayON(int *nums, int numsSize);
 
+
+int *twoSum(int* nums, int numSize, int target);
 #endif // ALGORITHM_METHOD_H_INCLUDED

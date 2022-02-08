@@ -10,12 +10,12 @@ int main()
 
     // Single Number
     int singleTest[5] = { 1, 1, 4, 2, 2 };
-    int ans = SingleNumberON2(singleTest, 5);
-    printf("The single number answer is %d\n", ans);
+    int singleNumberAns= SingleNumberON2(singleTest, 5);
+    printf("The single number answer is %d\n", singleNumberAns);
 
     // Single Number
-    int anson = SingleNumberON(singleTest, 5);
-    printf("The single number on answer is %d\n", anson);
+    int singleNumberAnsOn = SingleNumberON(singleTest, 5);
+    printf("The single number on answer is %d\n", singleNumberAnsOn);
 
     // IsHappy
     int num = 19;
@@ -31,10 +31,49 @@ int main()
     int maxArrayON = MaxSubArrayON(subArray, 9);
     printf("Max Array ON =>%d\n",maxArrayON);
 
-    //ninenine();
-    tree(4);
+    // Two Sum
+    int twoSumArray[4] = {2,7,11,15};
+    int target=9;
+    int *twoSumAns = twoSum(twoSumArray,4,9);
+    printf("Two Sum=> Target:%d  Ans1:%d Ans2:%d\n",target, twoSumAns[0], twoSumAns[1]);
+    free(twoSumAns);
+
+    /*
+    char *output = transferLowcaseChar("A");
+    printf("%c\n",output);
+    */
+
+    int A=1, C=3;
+    // 宣告一個ptrA指標指向A記憶體位置 @=A 指向A的記憶體位置 @=&A 指向A記憶體位值
+    int *ptrA = &A;
+    // ptrA為 A的記憶體位置, *ptrA為A的記憶體位置資料, 所以此意思為傳入A記憶位置
+    func(ptrA);
+    printf("%d\n", *ptrA);
+
+
+    int *ptrB = &A;
+    func2(&ptrB);
+    printf("%d\n", *ptrB);
+
+    printf("\n");
     return 0;
 }
+
+int B=2;
+
+
+void func(int *p){
+    // *p 指向 ptrA的記憶體位置
+    p=&B;
+
+}
+
+
+void func2(int **p){
+    *p=&B;
+
+}
+
 
 // 99 Test
 void ninenine(){
@@ -63,7 +102,6 @@ void ninenine(){
 
 // Tree Test
 void tree(int layer){
-
     /*
         *       4-1
        ***      4-2
@@ -86,3 +124,11 @@ void tree(int layer){
         printf("\n");
     }
 }
+
+// ¤j¼gÂà¤p¼g
+
+/*
+char *transferLowcaseChar(char *input){
+    return input +32;
+}
+*/
