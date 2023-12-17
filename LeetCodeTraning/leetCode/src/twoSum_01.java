@@ -7,6 +7,30 @@ public class twoSum_01 {
     
     @Test
     public void twoSumUnitTest() {
+
+
+        int i = 1;
+        while (i < 10)
+            if (i % 2 == 0)
+                System.out.println(i++);
+
+
+        var season =1;
+        switch (season){
+            case 1:
+                System.out.println("請穿著長袖出門");
+            case 2:
+                System.out.println("請穿著短袖出門");
+                break;
+            case 3:
+                System.out.println("請加件長袖輕薄外套出門");
+                break;
+            case 4:
+                System.out.println("請穿著毛衣或大衣出門");
+                break;
+        }
+
+
       var twoSum = new twoSum_01();
       int[] nums = {2,7,11,15};
       int target = 9;  
